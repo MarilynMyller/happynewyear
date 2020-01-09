@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>snowfall❆</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5"></script>
+    <style>
+    body{
+        margin: 0px;
+        padding:0px;
+    }
+    </style>
+</head>
+
+<body>
+    <script>
+
+
+        let mySnowflake1;
+        let mySnowflake2;
+        let mySnowflake3;
+        let mySnowflake4;
+        let mySnowflake5;
+        let mySnowflake6;
+        let mySnowflake7;
+        let mySnowflake8;
+        let mySnowflake9;
+        let mySnowflake10;
+        let mySnowflake11;
+        let mySnowflake12;
+        let mySnowflake13;
+        let mySnowflake14;
+        let mySnowflake15;
+        let mySnowflake16;
+        let mySnowflake17;
+        let mySnowflake18;
+        let mySnowflake19;
+        let mySnowflake20;
+        let mySnowflake21;
+
+        function setup() {
+            createCanvas(displayWidth, displayHeight);
+            /*
+           //speed variante 1
+             mySnowflake1 = new Snowflake(color(255), 10, 0, random (0, 7)); //(color, tempXpos, tempYpos, tempYspeed)
+             mySnowflake2 = new Snowflake(color(255), 100, 0, random (0, 4)); //ohne random speed verteilung schöner, aber mit random dafür jedes mal anders, wenn neu gestartet
+             mySnowflake3 = new Snowflake (color(255), 200, 0, random (0, 10));
+             mySnowflake4 = new Snowflake(color(255), 230, 0, random (0, 3));
+             mySnowflake5 = new Snowflake(color(255), 310, 0, random (0, 6)); 
+             mySnowflake6 = new Snowflake (color(255), 390, 0, random (0, 12));
+             mySnowflake7 = new Snowflake(color(255), 520, 0, random (0, 5)); 
+             mySnowflake8 = new Snowflake(color(255), 580, 0, random (0, 2));
+             mySnowflake9 = new Snowflake (color(255), 650, 0, random (0, 9));
+             mySnowflake10 = new Snowflake(color(255), 720, 0, random (0, 1));
+             mySnowflake11 = new Snowflake(color(255), 860, 0, random (0, 8)); 
+             mySnowflake12 = new Snowflake(color(255), 990, 0, random (0, 3.5)); 
+             mySnowflake13 = new Snowflake(color(255), 1080, 0, random (0, 11)); 
+             mySnowflake14 = new Snowflake(color(255), 1160, 0, random (0, 4.5)); 
+             mySnowflake15 = new Snowflake(color(255), 1230, 0, random (0, 8.5));
+             mySnowflake16 = new Snowflake(color(255), 1290, 0, random (0, 12));
+             mySnowflake17 = new Snowflake(color(255), 1360, 0, random (0, 4));
+             mySnowflake18 = new Snowflake(color(255), 1410, 0, random (0, 6));
+             mySnowflake19 = new Snowflake(color(255), 1500, 0, random (0, 2));
+             mySnowflake20 = new Snowflake(color(255), width-90, 0, random (0, 8));
+             mySnowflake21 = new Snowflake(color(255), width-30, 0, random (0, 10)); 
+             */
+
+            //speed variante 2
+            mySnowflake1 = new Snowflake(color(255), 10, 0, random(0, 12));
+            mySnowflake2 = new Snowflake(color(255), 100, 0, random(0, 12));
+            mySnowflake3 = new Snowflake(color(255), 200, 0, random(0, 10));
+            mySnowflake4 = new Snowflake(color(255), 230, 0, random(0, 12));
+            mySnowflake5 = new Snowflake(color(255), 310, 0, random(0, 12));
+            mySnowflake6 = new Snowflake(color(255), 390, 0, random(0, 10));
+            mySnowflake7 = new Snowflake(color(255), 520, 0, random(0, 12));
+            mySnowflake8 = new Snowflake(color(255), 580, 0, random(0, 12));
+            mySnowflake9 = new Snowflake(color(255), 650, 0, random(0, 10));
+            mySnowflake10 = new Snowflake(color(255), 720, 0, random(0, 10));
+            mySnowflake11 = new Snowflake(color(255), 860, 0, random(0, 12));
+            mySnowflake12 = new Snowflake(color(255), 990, 0, random(0, 12));
+            mySnowflake13 = new Snowflake(color(255), 1080, 0, random(0, 10));
+            mySnowflake14 = new Snowflake(color(255), 1160, 0, random(0, 10));
+            mySnowflake15 = new Snowflake(color(255), 1230, 0, random(0, 12));
+            mySnowflake16 = new Snowflake(color(255), 1290, 0, random(0, 12));
+            mySnowflake17 = new Snowflake(color(255), 1360, 0, random(0, 10));
+            mySnowflake18 = new Snowflake(color(255), 1410, 0, random(0, 10));
+            mySnowflake19 = new Snowflake(color(255), 1500, 0, random(0, 12));
+            mySnowflake20 = new Snowflake(color(255), width - 90, 0, random(0, 10));
+            mySnowflake21 = new Snowflake(color(255), width - 30, 0, random(0, 10));
+
+            /*
+           //speed variante 3
+             mySnowflake1 = new Snowflake(color(255), 10, 0, 7); //(color, tempXpos, tempYpos, tempYspeed)
+             mySnowflake2 = new Snowflake(color(255), 100, 0, 4); //ohne random speed verteilung schöner, aber mit random dafür jedes mal anders, wenn neu gestartet
+             mySnowflake3 = new Snowflake (color(255), 200, 0, 10);
+             mySnowflake4 = new Snowflake(color(255), 230, 0, 3);
+             mySnowflake5 = new Snowflake(color(255), 310, 0, 6); 
+             mySnowflake6 = new Snowflake (color(255), 390, 0, 12);
+             mySnowflake7 = new Snowflake(color(255), 520, 0, 5); 
+             mySnowflake8 = new Snowflake(color(255), 580, 0, 2);
+             mySnowflake9 = new Snowflake (color(255), 650, 0, 9);
+             mySnowflake10 = new Snowflake(color(255), 720, 0, 1);
+             mySnowflake11 = new Snowflake(color(255), 860, 0, 8); 
+             mySnowflake12 = new Snowflake(color(255), 990, 0, 3.5); 
+             mySnowflake13 = new Snowflake(color(255), 1080, 0, 11); 
+             mySnowflake14 = new Snowflake(color(255), 1160, 0, 4.5); 
+             mySnowflake15 = new Snowflake(color(255), 1230, 0, 8.5);
+             mySnowflake16 = new Snowflake(color(255), 1290, 0, 12);
+             mySnowflake17 = new Snowflake(color(255), 1360, 0, 4);
+             mySnowflake18 = new Snowflake(color(255), 1410, 0, 6);
+             mySnowflake19 = new Snowflake(color(255), 1500, 0, 2);
+             mySnowflake20 = new Snowflake(color(255), width-90, 0, 8);
+             mySnowflake21 = new Snowflake(color(255), width-30, 0, 10);
+             */
+        }
+
+        function draw() {
+            background(150);
+            //background(mouseY, mouseX, 100); //HG bunt, ändert Farbe entsprechend Mausposition, sehr hübsch 
+            
+            let col_x = map(mouseX, 0, width, 0, 255);
+            let col_y = map(mouseY, 0, height, 0, 255)
+            
+            background(col_y, col_x, 200); //warum so viel Gelb?
+            //background(mouseY, mouseX, 360);
+            mySnowflake1.fall();
+            mySnowflake1.display();
+            mySnowflake2.fall();
+            mySnowflake2.display();
+            mySnowflake3.display();
+            mySnowflake3.fall();
+            mySnowflake4.fall();
+            mySnowflake4.display();
+            mySnowflake5.fall();
+            mySnowflake5.display();
+            mySnowflake6.fall();
+            mySnowflake6.display();
+            mySnowflake7.fall();
+            mySnowflake7.display();
+            mySnowflake8.fall();
+            mySnowflake8.display();
+            mySnowflake9.fall();
+            mySnowflake9.display();
+            mySnowflake10.fall();
+            mySnowflake10.display();
+            mySnowflake11.fall();
+            mySnowflake11.display();
+            mySnowflake12.fall();
+            mySnowflake12.display();
+            mySnowflake13.fall();
+            mySnowflake13.display();
+            mySnowflake14.fall();
+            mySnowflake14.display();
+            mySnowflake15.fall();
+            mySnowflake15.display();
+            mySnowflake16.fall();
+            mySnowflake16.display();
+            mySnowflake17.fall();
+            mySnowflake17.display();
+            mySnowflake18.fall();
+            mySnowflake18.display();
+            mySnowflake19.fall();
+            mySnowflake19.display();
+            mySnowflake20.fall();
+            mySnowflake20.display();
+            mySnowflake21.fall();
+            mySnowflake21.display();
+        }
+
+        class Snowflake {
+
+            constructor(tempC, tempXpos, tempYpos, tempYspeed) {
+                this.c = tempC;
+                this.xpos = tempXpos;
+                this.ypos = tempYpos;
+                this.yspeed = tempYspeed;
+            }
+
+            display() {
+                stroke(255);
+                fill(this.c);
+                ellipse(this.xpos, this.ypos, 5, 5);
+            }
+
+            fall() {
+                this.ypos = this.ypos + this.yspeed;
+                if (this.ypos > height) {
+                    this.ypos = 0;
+                }
+            }
+        }
+        // keyPressed() {
+        //     try {
+        //         saveFrame("screenshot.png");
+        //     }
+        //     catch (Exception e) {
+        //     }
+        // }
+    </script>
+</body>
+
+</html>
